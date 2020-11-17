@@ -1,0 +1,32 @@
+.btn {
+  background-color: transparent;
+  border: var(--border-solid) var(--green);
+  border-radius: var(--border-radius);
+  padding: 1.25rem 1.75rem;
+  font-size: var(--fz-sm);
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: var(--green-tint);
+}
+
+.btn:after {
+  display: none !important;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  border: var(--border-solid) var(--green-transparent);
+  font-style: italic;
+}

@@ -10,7 +10,7 @@
   --white: #e6f1ff;
   --green: #63ffeb;
   --green-transparent: #64ffd5ad;
-  --green-comp: #ff6377;
+  --green-comp-red: #ff6377;
   --green-tint: rgba(100, 255, 218, 0.07);
   --pink: #b61aae;
   --font-sans: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -24,6 +24,7 @@
   --fz-xl: 20px;
   --fz-xxl: 22px;
   --fz-heading: 32px;
+  --border-radius: 4px;
   --bp-mobile-s: 330px;
   --bp-mobile-m: 400px;
   --bp-mobile-l: 480px;
@@ -38,8 +39,8 @@
   --nav-scroll-height: 70px;
   --tab-height: 42px;
   --tab-width: 120px;
-  --easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)';
-  --transition: 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)';
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --border-solid: 2px solid;
 }
 
@@ -62,6 +63,59 @@ a {
   box-sizing: border-box;
 }
 
-.MuiCircularProgress-circle {
+.MuiSvgIcon-root.mui-pink,
+.MuiCircularProgress-root.mui-pink {
   color: var(--pink);
+}
+
+.visual-hidden {
+  text-indent: -9999px;
+  visibility: hidden;
+}
+
+.emoji {
+  margin-right: 5px;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* Fade up */
+.fadeup-enter {
+  opacity: 0.01;
+  transform: translateY(20px);
+  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+}
+.fadeup-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+}
+/* Fade down */
+.fadedown-enter {
+  opacity: 0.01;
+  transform: translateY(-20px);
+  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+}
+.fadedown-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+}
+/* Fade */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms var(--easing);
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms var(--easing);
 }
