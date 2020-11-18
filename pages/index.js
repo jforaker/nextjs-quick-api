@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <HomeContainer>
       <Head>
-        <title>Create Next App</title>
+        <title>nextjs-quick-api</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
